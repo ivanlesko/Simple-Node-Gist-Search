@@ -1,0 +1,13 @@
+<h1>Gists results for <%= search %></h1>
+<% if (results.length) { %>
+	<ul>
+		<% for (var i = 0; i < results.length; i++) {%>
+		<li>
+			<%- link_to(results[i].description, results[i].htmlURL) %> -
+			Created at <b><%= results[i].createdAt%></b>
+		</li>
+		<% } %>
+	</ul>
+	<% } else {%>
+		<p>No Results</p>
+	<% } %>
